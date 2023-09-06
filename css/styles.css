@@ -1,0 +1,172 @@
+*{
+    border: 0;
+    padding: 0;
+}
+html{
+    font-size: 14px;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+    
+}
+
+h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    padding-left: 15px;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
+}
+
+.type-of-product{
+    text-transform: uppercase;
+    margin:0;
+    color: hsl(228, 12%, 48%);
+    padding-left: 15px;
+    margin-top: 15px;
+}
+
+.price{
+    color:hsl(158, 36%, 37%);
+    font-size:2.5rem ;
+    font-family: 'Fraunces', serif;
+    padding-left: 15px;
+}
+
+.regular-price{
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+
+.product{/*div that contains all the elements,excepts the button*/
+    border-radius: 5% 5% 0% 0%;
+}
+
+.perfume{/*image of Gabrielle by CHANEL*/
+    height: 300px;
+    max-width: 100%;
+    border-radius: 5% 5% 0% 0%;
+    background-image: url(../images/image-product-mobile.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.description{/*<p> that contains the description of the perfume*/
+    color: hsl(228, 12%, 48%);
+    font-size: 1.25rem;
+    text-align:start;
+    padding-left: 15px;
+}
+
+.card{/*div that contains img of perfume, texts, prices*/
+    width:95%;
+    border-radius: 5% 5% 5% 5%;
+    background-color:hsl(0, 0%, 100%);
+    margin:0 auto;
+    margin-top:30px;
+    margin-bottom:30px;
+    height:700px;
+}
+
+.regular-price{/*Div that contains the prices*/
+    position: relative;
+    top:-55px;
+    left: 160px;
+}
+
+.button{
+    background-color:hsl(158, 36%, 37%);
+    color:hsl(0, 0%, 100%) ;
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+    top:-50px;
+    border-radius:5px;
+    text-align: center;
+    font-family:'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover{
+    background-color: hsl(212, 21%, 14%);
+}
+
+.button:focus{
+    outline: 2px solid hsl(228, 12%, 48%);
+}
+
+@media (min-width:1440px){
+    *{
+        box-sizing: border-box;
+    }
+
+    .card{
+        display: grid;
+        grid-template-areas: 
+        "image card"
+        "image card"
+        "image card";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3,1fr);
+        width: 65vw;
+        margin-top: 100px;
+    }
+
+    .perfume{
+        grid-area: image;
+        height: 100%;
+        background-image: url(../images/image-product-desktop.jpg);
+        border-radius: 5% 0% 0% 5%;
+    }
+
+    .product{
+        display: grid;
+        grid-area: card;
+        width: 100%;
+        align-content: space-evenly;   
+    }
+
+    .type-of-product{
+        font-size: 1.4rem;
+        margin-left: 25px;
+    }
+
+    h1{
+        font-size: 3rem;
+        width: 90%;
+        margin-left: 25px;
+    }
+
+    .description{
+        width: 80%;
+        text-align: left;
+        margin-left: 25px;
+        font-size: 1.7rem;
+        padding: 15px;
+    }
+
+    .prices{
+        margin-left: 25px;
+        font-size: 1.3rem;
+    }
+}
+
+.attribution{
+    font-size: 14px;
+    text-align: center;
+}
+
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+
+
